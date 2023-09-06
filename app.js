@@ -49,6 +49,7 @@ var tbodyData = document.getElementById("tbodyData");
 var stdCount = document.getElementById("stdCount");
 var tableDiv = document.getElementById("tableDiv");
 var editForm = document.getElementById("editForm");
+var noDataDiv = document.getElementById("noDataDiv");
 var stdUpdateBtn = document.getElementById("stdUpdateBtn");
 
 var fName = document.getElementById("fName");
@@ -108,6 +109,9 @@ function student() {
 
   if (studentList.length !== 0) {
     tableDiv.style.display = "block";
+  } else if (studentList.length == 0) {
+    tableDiv.style.display = "none";
+    noDataDiv.style.display = "block";
   } else {
     tableDiv.style.display = "none";
   }
